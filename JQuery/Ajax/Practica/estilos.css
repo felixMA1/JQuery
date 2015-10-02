@@ -1,0 +1,28 @@
+﻿body {
+    margin: 0 auto;
+    width: 30%;
+}
+
+#informacion {
+    background-color: ;
+    float: left;
+    width: 60%;
+    height: 0;
+}
+#capaNuevo {
+    display: none;
+    width: 40%;
+    float: right;
+}
+
+#abrirCapa {
+    margin-left: 97px;
+}
+
+table {
+    border: 1px solid;
+    width: 259px;
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    background: rgba(123, 63, 63, .5);
+}
