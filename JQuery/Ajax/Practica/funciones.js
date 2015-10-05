@@ -32,11 +32,10 @@ function conAjaxAdd(e) {
         $.ajax({
             method: "post",
             url: url,
-            success: function(res) {
-                console.log(res);
-            },
+            success: conGet,
             error: function(err) {
                 console.log(err);
+                alert("Datos erroneos");
             },
             data: JSON.stringify(obj),
             dataType: "json",
@@ -45,7 +44,6 @@ function conAjaxAdd(e) {
             }
 
         });
-    conGet();
 }
 
 function conAjaxDel(id) {
@@ -53,14 +51,12 @@ function conAjaxDel(id) {
     $.ajax({
         method: "delete",
         url: url+"/"+id,
-        success: function (res) {
-            console.log(res);
-        },
+        success: conGet,
         error: function (err) {
             console.log(err);
         }
     });
-    conGet();
+
 }
 
 function buscar() {
@@ -77,6 +73,7 @@ $(document).ready(function () {
 
     conGet();
     $("#nuevo").click(conAjaxAdd);
+    //$("#nuevo").bind("click",conAjaxAdd);
     $("#aceptar").click(buscar);
     $("#abrirCapa").click(function () {
 
